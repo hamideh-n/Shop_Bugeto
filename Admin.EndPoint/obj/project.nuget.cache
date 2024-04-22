@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "hkYGW5nMZ1rbClCCjHT2rZoythE4btN56s6s41QNlcbAluge0OF4dFurbx2mnSoDJp2Tx/7+YHEhZ9Q9PYvJZw==",
+  "dgSpecHash": "CkiziM/u0WivaFtCUTeVnCzpHD2UFarQIWPX+vAZN/d3XdHnTRHdwygXveynAgkq/Xrv3KoeQv3pGvOlLHIWOQ==",
   "success": true,
-  "projectFilePath": "D:\\Shop\\Admin.EndPoint\\Admin.EndPoint.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\k.naseri\\source\\repos\\Shop_Bugeto\\Admin.EndPoint\\Admin.EndPoint.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\k.naseri\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.18\\microsoft.windowsdesktop.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\k.naseri\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.18\\microsoft.netcore.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\k.naseri\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.18\\microsoft.aspnetcore.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\k.naseri\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.18\\microsoft.netcore.app.host.win-x64.7.0.18.nupkg.sha512"
+  ],
   "logs": []
 }

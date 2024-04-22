@@ -5,8 +5,8 @@ namespace WebSite.EndPoint.Models.ViewModels.User
     public class RegisterViewModel
     {
         [Required(ErrorMessage = "نام و نام خانوادگی را وارد نمایید")]
-        [Display(Name ="نام و نام خانوادگی")]
-        [MaxLength(100,ErrorMessage = "نام و نام خانوادگی نباید بیش از 100 کاراکتر باشد")]
+        [Display(Name = "نام و نام خانوادگی")]
+        [MaxLength(100, ErrorMessage = "نام و نام خانوادگی نباید بیش از 100 کاراکتر باشد")]
         public string FullName { get; set; }
         [Required(ErrorMessage = "ایمیل را وارد نمایید")]
         [EmailAddress]

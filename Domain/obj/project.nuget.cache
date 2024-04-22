@@ -1,20 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "I60LDBX4o5XIIE9+Ht/tRiuxQPlDHBcAeDt0UA42d3RmA2ZYPoS0Kvt4DWH/JgcChKsnQXkqBP2JD+nudJepRg==",
+  "dgSpecHash": "W5omtij4UwHkHu8jvpqqHDV8rarhxFRae0efJRK6dAO2nnTOTr6uCkcknXEcZyiUcdaEu/kenB7b31IgMHy+eg==",
   "success": true,
-  "projectFilePath": "D:\\Shop\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\k.naseri\\source\\repos\\Shop_Bugeto\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\naser\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.0\\microsoft.aspnetcore.cryptography.internal.7.0.0.nupkg.sha512",
-    "C:\\Users\\naser\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.0\\microsoft.aspnetcore.cryptography.keyderivation.7.0.0.nupkg.sha512",
-    "C:\\Users\\naser\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
-    "C:\\Users\\naser\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
-    "C:\\Users\\naser\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
-    "C:\\Users\\naser\\.nuget\\packages\\microsoft.extensions.identity.core\\7.0.0\\microsoft.extensions.identity.core.7.0.0.nupkg.sha512",
-    "C:\\Users\\naser\\.nuget\\packages\\microsoft.extensions.identity.stores\\7.0.0\\microsoft.extensions.identity.stores.7.0.0.nupkg.sha512",
-    "C:\\Users\\naser\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
-    "C:\\Users\\naser\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
-    "C:\\Users\\naser\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
-    "C:\\Users\\naser\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+    "C:\\Users\\k.naseri\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.0\\microsoft.aspnetcore.cryptography.internal.7.0.0.nupkg.sha512",
+    "C:\\Users\\k.naseri\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.0\\microsoft.aspnetcore.cryptography.keyderivation.7.0.0.nupkg.sha512",
+    "C:\\Users\\k.naseri\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\k.naseri\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\k.naseri\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\k.naseri\\.nuget\\packages\\microsoft.extensions.identity.core\\7.0.0\\microsoft.extensions.identity.core.7.0.0.nupkg.sha512",
+    "C:\\Users\\k.naseri\\.nuget\\packages\\microsoft.extensions.identity.stores\\7.0.0\\microsoft.extensions.identity.stores.7.0.0.nupkg.sha512",
+    "C:\\Users\\k.naseri\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "C:\\Users\\k.naseri\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\k.naseri\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "C:\\Users\\k.naseri\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\k.naseri\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.18\\microsoft.windowsdesktop.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\k.naseri\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.18\\microsoft.netcore.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\k.naseri\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.18\\microsoft.aspnetcore.app.ref.7.0.18.nupkg.sha512"
   ],
   "logs": []
 }

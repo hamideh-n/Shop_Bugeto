@@ -4085,19 +4085,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\naser\\.nuget\\packages\\": {}
+    "C:\\Users\\k.naseri\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Shop\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\k.naseri\\source\\repos\\Shop_Bugeto\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "D:\\Shop\\Infrastructure\\Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\naser\\.nuget\\packages\\",
-      "outputPath": "D:\\Shop\\Infrastructure\\obj\\",
+      "projectPath": "C:\\Users\\k.naseri\\source\\repos\\Shop_Bugeto\\Infrastructure\\Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\k.naseri\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\k.naseri\\source\\repos\\Shop_Bugeto\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\naser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\k.naseri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4105,14 +4110,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Shop\\Persistence\\Persistence.csproj": {
-              "projectPath": "D:\\Shop\\Persistence\\Persistence.csproj"
+            "C:\\Users\\k.naseri\\source\\repos\\Shop_Bugeto\\Persistence\\Persistence.csproj": {
+              "projectPath": "C:\\Users\\k.naseri\\source\\repos\\Shop_Bugeto\\Persistence\\Persistence.csproj"
             }
           }
         }
@@ -4147,12 +4153,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.18, 7.0.18]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.18, 7.0.18]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[7.0.18, 7.0.18]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }
