@@ -16,11 +16,12 @@ namespace WebSite.EndPoint.Services
             client.Host = "smtp.gmail.com";
             client.EnableSsl = true;
             client.Timeout = 1000000;
+            client.UseDefaultCredentials = false;
             client.DeliveryMethod = SmtpDeliveryMethod.Network;
             client.UseDefaultCredentials = false;
             //در خط بعدی ایمیل  خود و پسورد ایمیل خود  را جایگزین کنید
-            client.Credentials = new NetworkCredential("bugeto.net@gmail.com", "password-khodet-ro-inja-bezar");
-            MailMessage message = new MailMessage("bugeto.net@gmail.com", UserEmail, Subject, Body);
+            client.Credentials = new NetworkCredential("hamideh.naserii00@gmail.com", "09124261258");
+            MailMessage message = new MailMessage("hamideh.naserii00@gmail.com", UserEmail, Subject, Body);
             message.IsBodyHtml = true;
             message.BodyEncoding = UTF8Encoding.UTF8;
             message.DeliveryNotificationOptions = DeliveryNotificationOptions.OnSuccess;

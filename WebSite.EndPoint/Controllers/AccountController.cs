@@ -1,7 +1,6 @@
 ﻿using Domain.Users.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using NuGet.Common;
 using WebSite.EndPoint.Models.ViewModels.User;
 using WebSite.EndPoint.Services;
 
@@ -11,10 +10,8 @@ namespace WebSite.EndPoint.Controllers
     {
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
-
-        public EmailService _emailService { get; }
-
-        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, EmailService emailService)
+        private readonly EmailService _emailService;
+        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -42,15 +39,13 @@ namespace WebSite.EndPoint.Controllers
             var result = _userManager.CreateAsync(user, register.Password).Result;
             if (result.Succeeded)
             {
-                var token=_userManager.GenerateEmailConfirmationTokenAsync(user);
-                string callbackUrl = Url.Action("ConfirmEmail", "Account", new
-                {
-                    UserId = user.Id
-               ,
-                    token = token
-                }, protocol: Request.Scheme);
-                string body = $"لطفا برای فعال حساب کاربری بر روی لینک زیر کلیک کنید!  <br/> <a href={callbackUrl}> Link </a>";
-                _emailService.Execute(register.Email, body, "تایید ایمیل");
+                //var token=_userManager.GenerateEmailConfirmationTokenAsync(user);
+                //string callbackUrl = Url.Action("ConfirmEmail", "Account", new
+                //{
+                //    UserId = user.Id,token = token
+                //}, protocol: Request.Scheme);
+                //string body = $"لطفا برای فعال حساب کاربری بر روی لینک زیر کلیک کنید!  <br/> <a href={callbackUrl}> Link </a>";
+                //_emailService.Execute(register.Email, body, "تایید ایمیل");
                 return RedirectToAction(nameof(DisplayEmail));
             }
             foreach (var error in result.Errors)
@@ -76,21 +71,20 @@ namespace WebSite.EndPoint.Controllers
                 return View(model);
             }
             _signInManager.SignOutAsync();
-            var result = _signInManager.PasswordSignInAsync(user,model.Password,model.IsPersistent,true).Result;
+            var result = _signInManager.PasswordSignInAsync(user, model.Password, model.IsPersistent, true).Result;
             if (result.Succeeded)
             {
-              return Redirect(model.ReturnUrl);
+                return Redirect(model.ReturnUrl);
             }
             return View(model);
         }
         public IActionResult LogOut()
         {
-           _signInManager.SignOutAsync();
+            _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
         public IActionResult ConfirmEmail(string UserId, string Token)
         {
-         
             return View();
         }
         public IActionResult DisplayEmail(string UserId, string Token)
