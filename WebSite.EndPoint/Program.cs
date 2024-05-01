@@ -1,6 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Persistence.Contexts;
 using Infrastructure.IdentityConfig;
+using Application.Interface.DbContext;
+using Persistence.Contexts.MongoContext;
+using Application.Visitors.SaveVisitorInfo;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +16,9 @@ builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(c
 //builder.Services.AddDbContext<IdentityDatabaseContext>(options => options.UseSqlServer(connectionString));
 builder.Services.AddIdentityService(builder.Configuration);
 builder.Services.AddAuthentication();
+//service Visitor
+builder.Services.AddTransient(typeof(IMongoDbContext<>), typeof(MongoDbContext<>));
+builder.Services.AddTransient<ISaveVisitorInfoService, SaveVisitorInfoService>();
 //
 builder.Services.ConfigureApplicationCookie(option =>
 {
