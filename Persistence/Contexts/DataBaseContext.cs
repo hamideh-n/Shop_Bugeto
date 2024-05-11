@@ -1,4 +1,5 @@
 ﻿using Application.Interface.DbContext;
+using Domain;
 using Domain.Attributes;
 using Domain.Users.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,8 @@ namespace Persistence.Contexts
         {
 
         }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 

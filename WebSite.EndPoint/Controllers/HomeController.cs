@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Domain.Users.Entities;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using WebSite.EndPoint.Models;
+using WebSite.EndPoint.Models.ViewModels.User;
 
 namespace WebSite.EndPoint.Controllers
 {
@@ -13,7 +16,7 @@ namespace WebSite.EndPoint.Controllers
         {
             _logger = logger;
         }
-        
+
         public IActionResult Index()
         {
             return View();
@@ -28,6 +31,15 @@ namespace WebSite.EndPoint.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+
+        [HttpPost]
+        public IActionResult Register(RegisterViewModel register)
+        {
+           
+            return Ok();
+
         }
     }
 }

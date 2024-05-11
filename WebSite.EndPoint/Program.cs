@@ -4,6 +4,7 @@ using Infrastructure.IdentityConfig;
 using Application.Interface.DbContext;
 using Persistence.Contexts.MongoContext;
 using Application.Visitors.SaveVisitorInfo;
+using WebSite.EndPoint.Utilities.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,13 +14,16 @@ builder.Services.AddControllersWithViews();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connectionString));
-//builder.Services.AddDbContext<IdentityDatabaseContext>(options => options.UseSqlServer(connectionString));
-builder.Services.AddIdentityService(builder.Configuration);
-builder.Services.AddAuthentication();
 //service Visitor
 builder.Services.AddTransient(typeof(IMongoDbContext<>), typeof(MongoDbContext<>));
 builder.Services.AddTransient<ISaveVisitorInfoService, SaveVisitorInfoService>();
+//builder.Services.AddTransient<IIVisitorOnlineService, VisitorOnlineService>();
+builder.Services.AddScoped<SaveVisitorFilter>();
 //
+//builder.Services.AddDbContext<IdentityDatabaseContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddIdentityService(builder.Configuration);
+builder.Services.AddAuthentication();
+
 builder.Services.ConfigureApplicationCookie(option =>
 {
     //زمان اعتبار کوکی
