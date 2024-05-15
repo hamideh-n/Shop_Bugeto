@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "6nLPOO58T9zrHHtPw9px7LQVwJsTJN4wTLmLNt4ezJZD3L2ZH5xdQXRVJGh2whRiLfUT9WbC6rLwbme3giXuhQ==",
+  "dgSpecHash": "Uuc5VaRuNk9Lcq3uQTgWTz8nUU2HHM5baSLIbqkB74OUTzDxlbJ517QS/b7LVg+fnVH3jSr5qFvqtTPiPDJEPg==",
   "success": true,
   "projectFilePath": "C:\\Users\\k.naseri\\source\\repos\\Shop_Bugeto\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\k.naseri\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\k.naseri\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\k.naseri\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
     "C:\\Users\\k.naseri\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

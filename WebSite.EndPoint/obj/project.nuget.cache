@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "r4C1G8DWWg8Odi1yhMrjOyMYRdFfDb0yPo5Vxtb05UBHTCvJhcnIOSiQykusgofYGh3I2u8G0ZJfVM+1IIg/DQ==",
+  "dgSpecHash": "rTMd9R9N7zRV1YrLW5sArtQ0bHZKMSCn4hUIxHsWvY1jKS/NIh95PBGzUns12J/ua1+U8erUb387R1dKpBr8cA==",
   "success": true,
   "projectFilePath": "C:\\Users\\k.naseri\\source\\repos\\Shop_Bugeto\\WebSite.EndPoint\\WebSite.EndPoint.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\k.naseri\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\k.naseri\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\k.naseri\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
     "C:\\Users\\k.naseri\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

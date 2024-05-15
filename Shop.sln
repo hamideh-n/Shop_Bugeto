@@ -23,7 +23,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebSite.EndPoint", "WebSite.EndPoint\WebSite.EndPoint.csproj", "{01F8C973-853A-4488-888D-F51B3A044FFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admin.EndPoint", "Admin.EndPoint\Admin.EndPoint.csproj", "{441BA54B-3D03-406F-842A-D563909E38FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Admin.EndPoint", "Admin.EndPoint\Admin.EndPoint.csproj", "{441BA54B-3D03-406F-842A-D563909E38FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documment", "Documment", "{CCC9DF0F-DF06-4305-B74E-E6D1DE1D0CB0}"
+	ProjectSection(SolutionItems) = preProject
+		Text = Text
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

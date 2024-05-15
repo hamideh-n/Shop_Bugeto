@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lbJNPo8qEA6JI6f+0PNquOfisrTKnnIyJPWuFF9tfM0/PN9pGHz7ZkYoiPMTi11KCi1PpkYsKytwCqvhMfPm5w==",
+  "dgSpecHash": "0WkueSSJMJDeJ74qiC6AaR8uWy/io+MZhH/WKpX9/sBrtBIgZ+9y2qb4Uv8ciEzyDvdwUwLcocccHa4VtrHl/w==",
   "success": true,
   "projectFilePath": "C:\\Users\\k.naseri\\source\\repos\\Shop_Bugeto\\Application\\Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\k.naseri\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\k.naseri\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\k.naseri\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
     "C:\\Users\\k.naseri\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",

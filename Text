@@ -1,0 +1,17 @@
+﻿1-Scafold-Database
+Scaffold-DbContext "Server=31.25.91.35,1520;Database=PISCTest;Trusted_Connection=True;User Id=Najafi;password=Najafi@#1402;Trusted_Connection=False;MultipleActiveResultSets=true;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -outputDir DbModelllll  -UseDatabaseNames -Force -Context "PISCTest" -t Academy.Category
+
+//پاک کردن ماگریشنی که در دیتابیس اعمال شده است 
+
+//Update-database اسم ماگریشن 
+
+//برای انتفال تغببرات بر روی سرور  تغییرات مارو با اسکیوال مقابسه می کند یک اسکریپت ایجاد می کند 
+Script-Migration or Script-Migration اسم ماگریشن قبل or Script-Migration اسم ماگریشن بعد  اسم ماگریشن قبل 
+
+//زمانیکه چند تا دیتابیس داریم 
+ add-Migration comment -context nameContext
+
+  update-database -context nameContext
+  remove-migration
+
+

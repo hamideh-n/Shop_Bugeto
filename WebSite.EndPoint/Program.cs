@@ -1,10 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Persistence.Contexts;
+﻿using Application.Interface.DbContext;
 using Infrastructure.IdentityConfig;
-using Application.Interface.DbContext;
+using Microsoft.EntityFrameworkCore;
+using Persistence.Contexts;
 using Persistence.Contexts.MongoContext;
-using Application.Visitors.SaveVisitorInfo;
-using WebSite.EndPoint.Utilities.Filters;
+//using Application.Visitors.SaveVisitorInfo;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,11 +15,12 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connectionString));
 //service Visitor
 builder.Services.AddTransient(typeof(IMongoDbContext<>), typeof(MongoDbContext<>));
-builder.Services.AddTransient<ISaveVisitorInfoService, SaveVisitorInfoService>();
+//builder.Services.AddTransient<ISaveVisitorInfoService, SaveVisitorInfoService>();
 //builder.Services.AddTransient<IIVisitorOnlineService, VisitorOnlineService>();
-builder.Services.AddScoped<SaveVisitorFilter>();
+//builder.Services.AddScoped<SaveVisitorFilter>();
 //
 //builder.Services.AddDbContext<IdentityDatabaseContext>(options => options.UseSqlServer(connectionString));
+//builder.Services.addAutoMapper();
 builder.Services.AddIdentityService(builder.Configuration);
 builder.Services.AddAuthentication();
 
@@ -35,12 +35,13 @@ builder.Services.ConfigureApplicationCookie(option =>
     //اگر در مدت زمانیکه مشخص کردیم کاربر فعالیتی داشت تمدید میشود 
     option.SlidingExpiration = true;
 });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
- app.UseExceptionHandler("/Home/Error");
+    app.UseExceptionHandler("/Home/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }

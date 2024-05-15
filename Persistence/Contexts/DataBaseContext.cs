@@ -1,21 +1,19 @@
 ﻿using Application.Interface.DbContext;
-using Domain;
 using Domain.Attributes;
-using Domain.Users.Entities;
+using Domain.Catalogs;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Identity.Client;
-using System.Reflection;
+using Persistence.EntityConfigurations;
 
 namespace Persistence.Contexts
 {
     public class DatabaseContext : DbContext, IDatabaseContext
     {
-        public DatabaseContext(DbContextOptions<DatabaseContext> options):base(options)
+        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
 
         }
-        public DbSet<Product> Products { get; set; }
-        public DbSet<Category> Categories { get; set; }
+        public DbSet<CatalogBrand> CatalogBrands { get; set; }
+        public DbSet<CatalogType> CatalogTypes { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
@@ -32,10 +30,11 @@ namespace Persistence.Contexts
                 }
 
             }
+            modelBuilder.ApplyConfiguration(new CatalogBrandEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new CatalogTypeEntityConfiguration());
+
             base.OnModelCreating(modelBuilder);
         }
-
-
         public override int SaveChanges()
         {
 
