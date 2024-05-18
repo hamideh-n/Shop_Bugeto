@@ -4500,6 +4500,7 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "AutoMapper": "13.0.1",
+          "Common": "1.0.0",
           "Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.0",
           "MongoDB.Driver": "2.25.0"
@@ -4509,6 +4510,16 @@
         },
         "runtime": {
           "bin/placeholder/Application.dll": {}
+        }
+      },
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
         }
       },
       "Domain/1.0.0": {
@@ -12581,6 +12592,11 @@
       "path": "../Application/Application.csproj",
       "msbuildProject": "../Application/Application.csproj"
     },
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
+    },
     "Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Domain.csproj",
@@ -12604,7 +12620,6 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.12",
-      "Persistence >= 1.0.0",
       "UAParser >= 3.1.47"
     ]
   },
@@ -12643,9 +12658,6 @@
           "projectReferences": {
             "C:\\Users\\k.naseri\\source\\repos\\Shop_Bugeto\\Infrastructure\\Infrastructure.csproj": {
               "projectPath": "C:\\Users\\k.naseri\\source\\repos\\Shop_Bugeto\\Infrastructure\\Infrastructure.csproj"
-            },
-            "C:\\Users\\k.naseri\\source\\repos\\Shop_Bugeto\\Persistence\\Persistence.csproj": {
-              "projectPath": "C:\\Users\\k.naseri\\source\\repos\\Shop_Bugeto\\Persistence\\Persistence.csproj"
             }
           }
         }

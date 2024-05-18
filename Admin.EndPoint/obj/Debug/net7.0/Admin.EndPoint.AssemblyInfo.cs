@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Admin.EndPoint")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7854e58b159db1d89334f47609e659a8cb3377d4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57ebfcc2f5b6cef23590e7f4bcc338f296138340")]
 [assembly: System.Reflection.AssemblyProductAttribute("Admin.EndPoint")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Admin.EndPoint")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

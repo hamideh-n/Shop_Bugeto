@@ -1,7 +1,18 @@
+using Application.Catalogs.CatalogTypes;
+using Application.Interface.DbContext;
+using Microsoft.EntityFrameworkCore;
+using MongoDB.Driver.Core.Configuration;
+using Persistence.Contexts.MongoContext;
+using Persistence.Contexts;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+//builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connectionString));
+//service Visitor
+//builder.Services.AddTransient(typeof(IMongoDbContext<>), typeof(MongoDbContext<>));
+builder.Services.AddTransient<ICatalogTypeService, CatalogTypeService>();
 
 var app = builder.Build();
 

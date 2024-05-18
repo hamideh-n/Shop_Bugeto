@@ -1,5 +1,7 @@
-﻿using Application.Interface.DbContext;
+﻿using Application.Catalogs.CatalogTypes;
+using Application.Interface.DbContext;
 using Infrastructure.IdentityConfig;
+using Infrastructure.MappingProfile;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Contexts;
 using Persistence.Contexts.MongoContext;
@@ -15,6 +17,7 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connectionString));
 //service Visitor
 builder.Services.AddTransient(typeof(IMongoDbContext<>), typeof(MongoDbContext<>));
+builder.Services.AddTransient<ICatalogTypeService,CatalogTypeService>();
 //builder.Services.AddTransient<ISaveVisitorInfoService, SaveVisitorInfoService>();
 //builder.Services.AddTransient<IIVisitorOnlineService, VisitorOnlineService>();
 //builder.Services.AddScoped<SaveVisitorFilter>();
@@ -35,6 +38,8 @@ builder.Services.ConfigureApplicationCookie(option =>
     //اگر در مدت زمانیکه مشخص کردیم کاربر فعالیتی داشت تمدید میشود 
     option.SlidingExpiration = true;
 });
+builder.Services.AddAutoMapper(typeof(CatalogMappingProfile));
+//mapper
 
 var app = builder.Build();
 

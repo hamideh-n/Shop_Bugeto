@@ -557,6 +557,16 @@
           "lib/net7.0/ZstdSharp.dll": {}
         }
       },
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
+      },
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -1439,6 +1449,11 @@
         "zstdsharp.port.nuspec"
       ]
     },
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
+    },
     "Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Domain.csproj",
@@ -1448,6 +1463,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "AutoMapper >= 13.0.1",
+      "Common >= 1.0.0",
       "Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.0",
       "MongoDB.Driver >= 2.25.0"
@@ -1486,6 +1502,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "C:\\Users\\k.naseri\\source\\repos\\Shop_Bugeto\\Common\\Common.csproj": {
+              "projectPath": "C:\\Users\\k.naseri\\source\\repos\\Shop_Bugeto\\Common\\Common.csproj"
+            },
             "C:\\Users\\k.naseri\\source\\repos\\Shop_Bugeto\\Domain\\Domain.csproj": {
               "projectPath": "C:\\Users\\k.naseri\\source\\repos\\Shop_Bugeto\\Domain\\Domain.csproj"
             }

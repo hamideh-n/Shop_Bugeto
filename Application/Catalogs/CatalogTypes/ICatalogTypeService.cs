@@ -1,6 +1,9 @@
 ﻿using Application.Dtos;
 using Application.Interface.DbContext;
 using AutoMapper;
+using Common;
+using Domain.Catalogs;
+using System.Net.WebSockets;
 
 namespace Application.Catalogs.CatalogTypes
 {
@@ -25,24 +28,34 @@ namespace Application.Catalogs.CatalogTypes
         }
         public BaseDto<CatalogTypeDto> Add(CatalogTypeDto catalogTypeDto)
         {
-            throw new NotImplementedException();
+            var data = _mapper.Map<CatalogType>(catalogTypeDto);
+            var add = _databaseContext.CatalogTypes.Add(data);
+            _databaseContext.SaveChanges();
+            return  new BaseDto<CatalogTypeDto>(new List<string> { $"تایپ {catalogTypeDto.Type} با موفقیت در سیستم ثبت شد" },_mapper.Map<CatalogTypeDto>(data),true);
         }
 
         public BaseDto<CatalogTypeDto> Edite(CatalogTypeDto catalogTypeDto)
         {
-            throw new NotImplementedException();
+             var data = _databaseContext.CatalogTypes.SingleOrDefault(x=>x.Id==catalogTypeDto.Id);
+             var result= _mapper.Map<CatalogType>(data);
+            _databaseContext.SaveChanges();
+            return new BaseDto<CatalogTypeDto>(new List<string> { "دیتا با موفقیت آپدیت شد " },_mapper.Map<CatalogTypeDto>(result),true);
         }
 
         public BaseDto<CatalogTypeDto> FindById(int Id)
         {
-            var result = _databaseContext.CatalogTypes.Find(Id);
-            _mapper.Map<CatalogTypeDto>(result);
-            throw new NotImplementedException();
+            var data = _databaseContext.CatalogTypes.Find(Id);
+            var result= _mapper.Map<CatalogTypeDto>(data);
+            return new BaseDto<CatalogTypeDto>(new List<string> { "دیتا با موفقیت یافت شد " },result,true);
         }
 
         public PaginatedItemsDto<CatalogTypeListDto> GetList(int? parentId, int page, int pageSize)
         {
-            throw new NotImplementedException();
+            var totalCount = 0;
+            var data = _databaseContext.CatalogTypes.AsQueryable().PagedResult(page, pageSize,out totalCount);
+
+            var result=_mapper.ProjectTo<CatalogTypeListDto>(data).ToList();
+            return new PaginatedItemsDto<CatalogTypeListDto> (page, pageSize,totalCount,result);
         }
 
         public BaseDto Remove(int Id)
@@ -63,4 +76,5 @@ namespace Application.Catalogs.CatalogTypes
         public string Type { get; set; }
         public int SubTypeCount { get; set; }
     }
+   
 }
