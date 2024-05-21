@@ -3,7 +3,7 @@ using Application.Interface.DbContext;
 using AutoMapper;
 using Common;
 using Domain.Catalogs;
-using System.Net.WebSockets;
+
 
 namespace Application.Catalogs.CatalogTypes
 {
@@ -39,7 +39,7 @@ namespace Application.Catalogs.CatalogTypes
              var data = _databaseContext.CatalogTypes.SingleOrDefault(x=>x.Id==catalogTypeDto.Id);
              var result= _mapper.Map<CatalogType>(data);
             _databaseContext.SaveChanges();
-            return new BaseDto<CatalogTypeDto>(new List<string> { "دیتا با موفقیت آپدیت شد " },_mapper.Map<CatalogTypeDto>(result),true);
+            return new BaseDto<CatalogTypeDto>(new List<string> { "دیتا با موفقیت آپدیت شد" },_mapper.Map<CatalogTypeDto>(result),true);
         }
 
         public BaseDto<CatalogTypeDto> FindById(int Id)
@@ -53,14 +53,15 @@ namespace Application.Catalogs.CatalogTypes
         {
             var totalCount = 0;
             var data = _databaseContext.CatalogTypes.AsQueryable().PagedResult(page, pageSize,out totalCount);
-
             var result=_mapper.ProjectTo<CatalogTypeListDto>(data).ToList();
             return new PaginatedItemsDto<CatalogTypeListDto> (page, pageSize,totalCount,result);
         }
 
         public BaseDto Remove(int Id)
         {
-            throw new NotImplementedException();
+            var data = _databaseContext.CatalogTypes.SingleOrDefault(x => x.Id == Id);
+            _databaseContext.CatalogTypes.Remove(data);//new catalogType{Id==Id}
+            return new BaseDto(new List<string> {$"این پیام با موفقیت حذف شد "},true);
         }
     }
     public class CatalogTypeDto

@@ -1,9 +1,4 @@
 using Application.Catalogs.CatalogTypes;
-using Application.Interface.DbContext;
-using Microsoft.EntityFrameworkCore;
-using MongoDB.Driver.Core.Configuration;
-using Persistence.Contexts.MongoContext;
-using Persistence.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,9 +8,7 @@ builder.Services.AddRazorPages();
 //service Visitor
 //builder.Services.AddTransient(typeof(IMongoDbContext<>), typeof(MongoDbContext<>));
 builder.Services.AddTransient<ICatalogTypeService, CatalogTypeService>();
-
 var app = builder.Build();
-
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
