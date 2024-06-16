@@ -3,6 +3,7 @@ using Domain.Attributes;
 using Domain.Catalogs;
 using Microsoft.EntityFrameworkCore;
 using Persistence.EntityConfigurations;
+using Persistence.Seeds;
 
 namespace Persistence.Contexts
 {
@@ -22,22 +23,21 @@ namespace Persistence.Contexts
             {
                 if (entityType.ClrType.GetCustomAttributes(typeof(AuditableAttribute), true).Length > 0)
                 {
-                    modelBuilder.Entity(entityType.Name).Property<DateTime>("InsertTime");
+                    modelBuilder.Entity(entityType.Name).Property<DateTime>("InsertTime").HasDefaultValue(DateTime.Now);
                     modelBuilder.Entity(entityType.Name).Property<DateTime?>("UpdateTime");
                     modelBuilder.Entity(entityType.Name).Property<DateTime?>("RemoveTime");
-                    modelBuilder.Entity(entityType.Name).Property<bool>("IsRemoved");
+                    modelBuilder.Entity(entityType.Name).Property<bool>("IsRemoved").HasDefaultValue(false);
 
                 }
 
             }
             modelBuilder.ApplyConfiguration(new CatalogBrandEntityConfiguration());
             modelBuilder.ApplyConfiguration(new CatalogTypeEntityConfiguration());
-
+            DatabaseContextSeed.CatalogSeed(modelBuilder);
             base.OnModelCreating(modelBuilder);
         }
         public override int SaveChanges()
         {
-
             var modifiedEntities = ChangeTracker.Entries()
                 .Where(p => p.State == EntityState.Modified ||
                 p.State == EntityState.Added ||
@@ -45,14 +45,11 @@ namespace Persistence.Contexts
 
             foreach (var item in modifiedEntities)
             {
-
                 var entityType = item.Context.Model.FindEntityType(item.Entity.GetType());
-
                 var inserted = entityType.FindProperty("InsertTime");
                 var update = entityType.FindProperty("UpdateTime");
                 var removedTime = entityType.FindProperty("RemoveTime");
                 var isRemoved = entityType.FindProperty("IsRemoved");
-
 
                 if (item.State == EntityState.Added && inserted != null)
                 {

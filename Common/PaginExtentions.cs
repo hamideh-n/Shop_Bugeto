@@ -47,7 +47,6 @@ namespace Common
             return query.Skip(excludedRows).Take(pageSize);
         }
 
-
         public static IQueryable<TSource> PagedResult<TSource>(this IQueryable<TSource> query, int pageNum, int pageSize, out int rowsCount)
         {
             if (pageSize <= 0) pageSize = 20;

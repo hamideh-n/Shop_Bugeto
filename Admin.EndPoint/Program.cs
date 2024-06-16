@@ -1,13 +1,21 @@
-using Application.Catalogs.CatalogTypes;
+﻿using Application.Catalogs.CatalogTypes;
+using Infrastructure.MappingProfile;
+using Microsoft.EntityFrameworkCore;
+using Persistence.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-//builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connectionString));
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connectionString));
 //service Visitor
 //builder.Services.AddTransient(typeof(IMongoDbContext<>), typeof(MongoDbContext<>));
 builder.Services.AddTransient<ICatalogTypeService, CatalogTypeService>();
+//راه اندازی اتومپر
+builder.Services.AddAutoMapper(typeof(CatalogMappingProfile));
+
 var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
